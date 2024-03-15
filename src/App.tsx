@@ -7,7 +7,7 @@ import Hero from "./Pages/LandingPage/Hero/Hero";
 import BookAppointment from "./Pages/LandingPage/Appointment/BookAppointment";
 import Service from "./Pages/LandingPage/Service/service";
 import How from "./Pages/LandingPage/How/How";
-import About from "./Pages/About/About";
+import About from "./Components/About/About";
 import HospitalSearch from "./Components/HospitalSearch";
 import PageNotFound from "./Pages/PageNotFound/PageNotFound";
 

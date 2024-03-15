@@ -1,13 +1,13 @@
 import React from "react";
 import { motion } from "framer-motion";
-import One from "../../../assestss/images/one.jpg";
-import Two from "../../../assestss/images/two.jpg";
-import doctor from "../../../assestss/images/Doctor.png";
-import hospital from "../../../assestss/images/hospital.png";
-import exportIcon from "../../../assestss/images/export.png";
-import share from "../.././../assestss/images/share.png";
-import how from "../../../assestss/images/How.png";
-import logo from "../../../assestss/images/logo2.png";
+import One from "../../../assests/images/one.jpg";
+import Two from "../../../assests/images/two.jpg";
+import doctor from "../../../assests/images/Doctor.png";
+import hospital from "../../../assests/images/hospital.png";
+import exportIcon from "../../../assests/images/export.png";
+import share from "../.././../assests/images/share.png";
+import how from "../../../assests/images/How.png";
+import logo from "../../../assests/images/logo2.png";
 import "./service.css";
 
 interface Feature {

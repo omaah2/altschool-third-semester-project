@@ -1,6 +1,6 @@
 import React from "react";
 import "./About.css";
-import Image from "../../assestss/images/about.png";
+import Image from "../../assests/images/about.png";
 import "animate.css";
 
 interface AboutProps {

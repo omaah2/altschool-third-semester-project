@@ -1,8 +1,8 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom"; // Import Link from React Router
-import hero from "../.././../assestss/images/hero-card.jpg";
-import right from "../.././../assestss/images/arrow-right.png";
+import hero from "../.././../assests/images/hero-card.jpg";
+import right from "../.././../assests/images/arrow-right.png";
 import "animate.css";
 import "./Hero.css";
 

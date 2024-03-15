@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../../assestss/images/logo.png";
+import logo from "../../assests/images/logo.png";
 import "./Navbar.css";
 
 const Navbar: React.FC<{ openSignUpForm: () => void }> = () => {

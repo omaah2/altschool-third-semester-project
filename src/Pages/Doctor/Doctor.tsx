@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import "./Doctor.css";
 
 import doctor1 from "../../assests/images/doctor1.jpg";
-import doctor2 from "../../assestss/images/doctor2.jpg";
-import doctor3 from "../../assestss/images/doctor3.jpg";
-import doctor4 from "../../assestss/images/doctor4.jpg";
+import doctor2 from "../../assests/images/doctor2.jpg";
+import doctor3 from "../../assests/images/doctor3.jpg";
+import doctor4 from "../../assests/images/doctor4.jpg";
 
 interface Doctor {
   id: number;
