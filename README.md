@@ -1,10 +1,10 @@
 # CareFinder 🏥
 
-![CareFinder  Screenshot](/src/assests/images/Screenshot%201.png) (/src/assests/images/Screenshot%202.png)
+![CareFinder  Screenshot](/src/assests/images/Screenshot%202.png)
 
 Welcome to CareFinder, your comprehensive solution for accessing vital information about hospitals and healthcare services in your vicinity. Our platform is designed to empower individuals in making informed decisions about their healthcare needs, ensuring convenience and peace of mind. 🚑
 It was created with React + Typescript + Vite + Vitest
-![CareFinder Logo](/src/assests/images/logo.png)
+![CareFinder Logo](/favicon.png)
 
 ## Table of Contents 📋
 
