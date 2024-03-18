@@ -4,7 +4,7 @@
 
 Welcome to CareFinder, your comprehensive solution for accessing vital information about hospitals and healthcare services in your vicinity. Our platform is designed to empower individuals in making informed decisions about their healthcare needs, ensuring convenience and peace of mind. 🚑
 It was created with React + Typescript + Vite + Vitest
-![CareFinder Logo](/favicon.png)
+![CareFinder Logo](/public/favicon.png)
 
 ## Table of Contents 📋
 
