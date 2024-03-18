@@ -74,8 +74,6 @@ We welcome contributions from the community! If you'd like to contribute to Care
 ## Todos
 
 - add few sleazy animation.
-- change the experience section into an array and map it.
-- change the services section into an array and map it.
 - 404 page - done ✔✔
 - more features yet to come.
 
