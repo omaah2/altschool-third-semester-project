@@ -1,3 +1,4 @@
+/* Styling for the container */
 .Ctn {
   justify-content: center;
   align-items: center;
@@ -6,19 +7,23 @@
   background-color: var(--background);
 }
 
+/* Styling for top right button */
 .top-right-button {
   display: flex;
-  justify-content: flex-end; /* Adjusted to make it responsive */
+  justify-content: flex-end; 
 }
 
+/* Styling for home button */
 .home-button {
-  padding: 8px 1%; /* Adjusted padding to make it responsive */
+  padding: 8px 1%; 
   border: 1px solid #9a6639;
   border-radius: 4px;
   color: var(--button);
-  width: auto; /* Adjusted width to be responsive */
+  width: auto;
+  transform: scale(0.89);
 }
 
+/* Styling for search section */
 .search {
   display: flex;
   justify-content: center;
@@ -28,7 +33,7 @@
 
 .search input {
   height: 8vh;
-  width: 60%; /* Adjusted width to be responsive */
+  width: 60%;
   border-radius: 25px;
   border: none;
   padding: 2vh 4vh;
@@ -46,34 +51,48 @@
   background-color: var(--button);
   color: white;
   padding: 20px;
-  width: 15%; /* Adjusted width to be responsive */
+  width: 10%;
   height: 4rem;
   border: none;
 }
 
 .search .search-results {
   position: absolute;
-  top: 100%;
-  left: 0;
-  width: calc(100% - 14px);
+  width: 60%;
+  top: 75%;
+  width: calc(80% - 14px);
   border-top: none;
   border-radius: 0 0 10px 10px;
   background-color: #fff;
   z-index: 999;
+  font-family: italics;
 }
 
 .search .search-results li {
+  list-style: none;
   padding: 10px;
   cursor: pointer;
 }
 
 .search .search-results li:hover {
-  background-color: #f0f0f0;
+  background-color: var(--background);
+}
+
+/* Styling for hospital details section */
+.details-h {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .hospital-details {
+  font-family: italics;
   margin-top: 20px;
-  width: 35%;
+  width: 25rem;
+  margin: 20px 20px 0 20px;
+  max-height: 30rem;
+  text-align: start;
+  overflow-y: auto;
   background-color: #fff;
   padding: 20px;
   border-radius: 10px;
@@ -91,32 +110,28 @@
 .hospital-details ul {
   list-style: none;
 }
-.search {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 20px;
+
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+  .search input {
+    width: 60%;
+  }
 }
 
-.search input {
-  height: 6vh; 
-  width: 50%; 
-  border-radius: 20px; 
-  border: none;
-  padding: 1vh 2vh; 
-  opacity: 0.7;
-  margin-right: 7px;
-  margin-top: 10px;
+/* Media query for even smaller screens */
+@media screen and (max-width: 480px) {
+  .home-button {
+    transform: scale(0.69);
+  }
+  .search input {
+    width: 70%;
+  }
+  .search .E-btn {
+    width: 20%;
+    transform: scale(0.69);
+  }
+  .hospital-details {
+    width: 70%;
+    margin: 20px auto;
+  }
 }
-
-.search .E-btn {
-  background-color: var(--button);
-  color: white;
-  padding: 15px; 
-  justify-content: center;
-  border-radius: 20px;
-  border: none;
-  height: 6vh; 
-  cursor: pointer;
-}
-

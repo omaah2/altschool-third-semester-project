@@ -19,9 +19,7 @@ const App: React.FC = () => {
       <Router>
         <AuthProvider>
           <Routes>
-            {/* Set the LandingPage as the default route */}
             <Route path="/" element={<LandingPage />} />
-            {/* Define other routes */}
             <Route path="/auth" element={<Auth />} />
             <Route path="/appointment" element={<BookAppointment />} />
             <Route path="/hero" element={<Hero />} />

@@ -8,6 +8,7 @@ interface Testimonial {
   comment: string;
 }
 
+// Testimonial data array
 const testimonials: Testimonial[] = [
   {
     id: 1,
@@ -42,12 +43,16 @@ const testimonials: Testimonial[] = [
 const Testimonials: React.FC = () => {
   return (
     <div className="t-cont">
+      {/* Title */}
       <h1>Testimonials</h1>
       <div className="testimonials-container">
+        {/* Iterate over testimonials and render each */}
         {testimonials.map((testimonial) => (
           <div key={testimonial.id} className="testimonial-card">
+            {/* Testimonial header */}
             <div className="testimonial-header">
               <h3>{testimonial.name}</h3>
+            
               <div className="rating">
                 {[...Array(testimonial.rating)].map((_, index) => (
                   <span key={index} className="filled">

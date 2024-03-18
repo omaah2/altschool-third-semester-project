@@ -1,17 +1,27 @@
+/* Adjustments for responsive design */
+
 .body {
-  display: flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: column;
 }
-.booking{
-  display: flex;
-  justify-content: space-between;
-  width: 80%;
-  margin: 30px;
- 
+
+/* Adjusted button text styles */
+.button-text {
+  text-decoration: none;
+  margin: 5px;
 }
 
+/* Styling for booking section */
+.booking {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  margin: auto;
+}
+
+/* Styling for book appointment container */
 .book-appointment-container {
   width: 35rem;
   padding: 20px;
@@ -22,12 +32,14 @@
   margin-left: 10px;
 }
 
+/* Header styles */
 h2 {
   text-align: center;
   margin-bottom: 20px;
   color: #c66d2e; 
 }
 
+/* Selected date styles */
 .selected-date {
   text-align: center;
   margin-top: 20px;
@@ -35,31 +47,35 @@ h2 {
   color: #c66d2e;
 }
 
+/* Form group styles */
 .form-group {
   margin-bottom: 20px;
 }
 
+/* Label styles */
 label {
   display: block;
   margin-bottom: 5px;
   color: #c66d2e;
 }
 
+/* Input and textarea styles */
 input,
 textarea {
   width: 90%;
   padding: 10px;
   border-radius: 5px;
   border: none;
+  outline: none;
   transition: border-color 0.3s ease;
 }
 
+/* Textarea styles */
 textarea {
   height: 100px;
 }
 
-
-
+/* Button styles */
 .bt {
   display: block;
   width: 100%;
@@ -72,10 +88,12 @@ textarea {
   transition: background-color 0.3s ease;
 }
 
+/* Button hover styles */
 .bt:hover {
   background-color: #ed8c47;
 }
 
+/* Appointments container styles */
 .appointments-container {
   width: 25rem;
   padding: 20px;
@@ -84,17 +102,20 @@ textarea {
   margin-bottom: 20px;
 }
 
+/* Appointments container header styles */
 .appointments-container h2 {
   text-align: center;
   margin-bottom: 20px;
   color: #c66d2e;
 }
 
+/* Appointments list styles */
 .appointments-container ul {
   list-style-type: none;
   padding: 0;
 }
 
+/* Appointment item styles */
 .appointments-container li {
   margin-bottom: 20px;
   padding: 10px;
@@ -102,12 +123,14 @@ textarea {
   border-radius: 5px;
 }
 
+/* Paragraph styles within appointments */
 .appointments-container p {
   margin: 5px 0;
 }
 
+/* Doctors section styles */
 .doctors-section {
-  width: 80rem;
+  width: 90%;
   margin: 20px auto;
   padding: 20px;
   background-color: #f5dabb;
@@ -115,17 +138,20 @@ textarea {
   box-shadow: var(--boxShadow);
 }
 
+/* Doctors list styles */
 .doctors-list {
   display: flex;
   justify-content: space-between;
 }
 
+/* Doctor item styles */
 .doctor {
   text-align: center;
   width: 30%;
-  margin-bottom: 20px;
+  margin-bottom: 45px;
 }
 
+/* Doctor image styles */
 .doctor img {
   width: 80%;
   height: auto;
@@ -135,41 +161,46 @@ textarea {
   margin-bottom: 10px;
 }
 
+/* Doctor name styles */
 .doctor h3 {
   margin-bottom: 5px;
   color: #333;
 }
 
+/* Doctor field styles */
 .doctor p {
   color: #666
 }
 
+/* Media query for tablet screens */
 @media only screen and (max-width: 768px) {
-  .doctors-list {
-    flex-wrap: wrap;
-  }
-
-  .doctor {
-    width: 45%;
-  }
-}
-
-@media only screen and (max-width: 576px) {
-  .body {
-    flex-direction: column;
-    align-items: center;
-  }
   .booking {
     flex-direction: column;
     align-items: center;
   }
   .book-appointment-container,
   .appointments-container {
-    width: 80%;
+    width: 90%;
     max-width: none;
     margin: 0 auto;
     padding: 10px;
     margin-bottom: 20px;
   }
+  .doctors-list {
+    flex-wrap: wrap;
+  }
+  .doctors-section {
+    width: 80%;
+  }
+  .doctor {
+    width: 40%;
+  }
+}
 
+/* Media query for mobile screens */
+@media only screen and (max-width: 576px) {
+  .body {
+    flex-direction: column;
+    align-items: center;
+  }
 }

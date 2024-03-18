@@ -21,7 +21,7 @@
     "noFallthroughCasesInSwitch": true,
 
     /* Type Definitions */
-    "types": ["node", "body-parser"]  // Add this line to include the type definitions for body-parser
+    "types": ["node", "body-parser"]
   },
   "include": ["src"],
   "references": [{ "path": "./tsconfig.node.json" }]

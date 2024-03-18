@@ -18,6 +18,7 @@ import { draftToMarkdown } from "markdown-draft-js";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
+// Interface defining the structure of Hospital object
 interface Hospital {
   id: string;
   name: string;
@@ -26,7 +27,9 @@ interface Hospital {
   markdownContent: EditorState;
 }
 
+// Component for Hospital Form
 const HospitalForm: React.FC = () => {
+  // State variables for managing hospital information, hospitals list, and share option
   const [hospitalInfo, setHospitalInfo] = useState<Hospital>({
     id: "",
     name: "",
@@ -37,39 +40,40 @@ const HospitalForm: React.FC = () => {
   const [hospitals, setHospitals] = useState<Hospital[]>([]);
   const [shareOption, setShareOption] = useState<string | null>(null);
 
- useEffect(() => {
-   const unsubscribe = auth.onAuthStateChanged(async (user) => {
-     if (user) {
-       try {
-         const q = query(
-           collection(db, "hospitals"),
-           where("userId", "==", user.uid)
-         );
-         const snapshot = await getDocs(q);
-         const hospitalsData: Hospital[] = snapshot.docs.map((doc) => ({
-           id: doc.id,
-           name: doc.data().name,
-           address: doc.data().address,
-           contact: doc.data().contact,
-           markdownContent: EditorState.createWithContent(
-             convertFromRaw(doc.data().markdownContent)
-           ),
-         }));
-         setHospitals(hospitalsData);
-       } catch (error) {
-         console.error("Error fetching hospitals: ", error);
-         toast.error("Error fetching hospitals");
-       }
-     } else {
-       // User is signed out, clear hospitals data
-       setHospitals([]);
-     }
-   });
+  // Effect hook to fetch hospitals data on component mount
+  useEffect(() => {
+    const unsubscribe = auth.onAuthStateChanged(async (user) => {
+      if (user) {
+        try {
+          const q = query(
+            collection(db, "hospitals"),
+            where("userId", "==", user.uid)
+          );
+          const snapshot = await getDocs(q);
+          const hospitalsData: Hospital[] = snapshot.docs.map((doc) => ({
+            id: doc.id,
+            name: doc.data().name,
+            address: doc.data().address,
+            contact: doc.data().contact,
+            markdownContent: EditorState.createWithContent(
+              convertFromRaw(doc.data().markdownContent)
+            ),
+          }));
+          setHospitals(hospitalsData);
+        } catch (error) {
+          console.error("Error fetching hospitals: ", error);
+          toast.error("Error fetching hospitals");
+        }
+      } else {
+        // User is signed out, clear hospitals data
+        setHospitals([]);
+      }
+    });
 
-   return unsubscribe;
- }, []);
+    return unsubscribe;
+  }, []);
 
-
+  // Function to handle changes in input fields
   const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
     const { name, value } = event.target;
     setHospitalInfo((prevState) => ({
@@ -77,6 +81,8 @@ const HospitalForm: React.FC = () => {
       [name]: value,
     }));
   };
+
+  // Function to handle form submission
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     console.log("Form submitted");
@@ -130,8 +136,7 @@ const HospitalForm: React.FC = () => {
     }
   };
 
-
-
+  // Function to handle deletion of a hospital
   const handleDelete = async (id: string) => {
     try {
       await deleteDoc(doc(db, "hospitals", id));
@@ -145,6 +150,7 @@ const HospitalForm: React.FC = () => {
     }
   };
 
+  // Function to handle image upload
   const handleImageUpload = (e: ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
     if (file) {
@@ -152,6 +158,7 @@ const HospitalForm: React.FC = () => {
     }
   };
 
+  // Function to convert EditorState to Markdown
   const convertToMarkdown = (editorState: EditorState) => {
     const contentState = editorState.getCurrentContent();
     if (!contentState) {
@@ -162,6 +169,7 @@ const HospitalForm: React.FC = () => {
     return markdownText;
   };
 
+  // Function to export hospitals data to CSV
   const exportToCSV = () => {
     const csvData = hospitals.map((hospital) =>
       [hospital.name, hospital.address, hospital.contact].join(",")
@@ -175,14 +183,23 @@ const HospitalForm: React.FC = () => {
     link.click();
   };
 
-  const shareViaEmail = () => {
-    toast.success("Sharing via email...");
-  };
-
+  // Function to generate shareable link for hospitals data
   const generateLink = () => {
+    const csvData = hospitals.map((hospital) =>
+      [hospital.name, hospital.address, hospital.contact].join(",")
+    );
+    const csvContent = "data:text/csv;charset=utf-8," + csvData.join("\n");
+    const encodedUri = encodeURI(csvContent);
+    const link = document.createElement("a");
+    link.setAttribute("href", encodedUri);
+    link.setAttribute("download", "hospitals.csv");
+    document.body.appendChild(link);
+    const shareableLink = window.URL.createObjectURL(new Blob([csvContent]));
     toast.success("Generating shareable link...");
+    setShareOption(shareableLink);
   };
 
+  // Rendering the JSX elements
   return (
     <div className="hospital-form-container">
       <h2>Add Hospital</h2>
@@ -281,15 +298,17 @@ const HospitalForm: React.FC = () => {
       </table>
 
       <div className="export-share-buttons">
-        <button onClick={exportToCSV}>Export to CSV</button>
-        <button onClick={() => setShareOption("email")}>Share Hospitals</button>
+        <button onClick={exportToCSV}>Export</button>
+        <button onClick={generateLink}>Generate Link</button>
       </div>
 
-      {shareOption === "email" && (
-        <button onClick={shareViaEmail}>Share via Email</button>
-      )}
-      {shareOption === "link" && (
-        <button onClick={generateLink}>Generate Link</button>
+      {shareOption && (
+        <div className="share-link">
+          <p>Shareable Link:</p>
+          <a href={shareOption} target="_blank" rel="noopener noreferrer">
+            {shareOption}
+          </a>
+        </div>
       )}
     </div>
   );

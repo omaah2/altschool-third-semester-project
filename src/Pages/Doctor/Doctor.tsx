@@ -1,3 +1,4 @@
+// DoctorList component for managing doctors list
 import React, { useState } from "react";
 import "./Doctor.css";
 
@@ -6,6 +7,7 @@ import doctor2 from "../../assests/images/doctor2.jpg";
 import doctor3 from "../../assests/images/doctor3.jpg";
 import doctor4 from "../../assests/images/doctor4.jpg";
 
+// Doctor interface to define structure of doctor object
 interface Doctor {
   id: number;
   name: string;
@@ -14,6 +16,7 @@ interface Doctor {
   experience: number;
 }
 
+// Initial list of doctors
 const initialDoctors: Doctor[] = [
   {
     id: 1,
@@ -45,6 +48,7 @@ const initialDoctors: Doctor[] = [
   },
 ];
 
+// DoctorList component function
 const DoctorList: React.FC = () => {
   const [doctorsList, setDoctorsList] = useState<Doctor[]>(initialDoctors);
   const [newDoctor, setNewDoctor] = useState<Doctor>({
@@ -55,11 +59,13 @@ const DoctorList: React.FC = () => {
     experience: 0,
   });
 
+  // Function to handle input change
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = event.target;
     setNewDoctor({ ...newDoctor, [name]: value });
   };
 
+  // Function to add new doctor
   const addDoctor = () => {
     if (
       newDoctor.name.trim() !== "" &&
@@ -67,10 +73,8 @@ const DoctorList: React.FC = () => {
       newDoctor.specialization.trim() !== "" &&
       newDoctor.experience > 0
     ) {
-      const updatedDoctors = [
-        ...doctorsList,
-        { ...newDoctor, id: doctorsList.length + 1 },
-      ];
+      const nextId = Math.max(...doctorsList.map((doctor) => doctor.id)) + 1;
+      const updatedDoctors = [...doctorsList, { ...newDoctor, id: nextId }];
       setDoctorsList(updatedDoctors);
       setNewDoctor({
         id: 0,
@@ -82,6 +86,8 @@ const DoctorList: React.FC = () => {
     }
   };
 
+
+  // JSX content for DoctorList component
   return (
     <div>
       <div className="doc-list">

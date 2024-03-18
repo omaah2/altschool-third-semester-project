@@ -1,61 +1,86 @@
-.about-us{
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    height: 100vh;
-    margin-bottom: 25px;
+.about-us {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 20px;
 }
-.about-us .Sub-cont{
-    width: 80%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10%;
+
+.about-us .Sub-cont {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
 }
-.about-us img{
-  height: 90vh;
+
+.about-us img {
+  max-width: 100%; 
+  height: auto; 
+  margin-top: 35px;
   border-radius: 35px;
   object-fit: cover;
-  
 }
+
 .about-us .content-text {
-  font-family: Arial, sans-serif;
-  max-width: 50%;
+  max-width: 100%; 
+  text-align: center; 
   padding: 20px;
-  text-align: start;
 }
 
+/* Header styles */
 .about-us h2 {
-  font-size: 35px;
- 
+  font-size: 28px;
 }
 
+/* Sub-header styles */
 .about-us h3 {
-  font-size: 20px;
-  margin-top: 20px;
-  margin-bottom: 10px;
+  font-size: 18px;
 }
 
+/* Paragraph styles */
 .about-us p {
-  font-size: 16px;
-  line-height: 1.6;
+  font-size: 14px;
 }
 
-.about-us ul {
-  list-style-type: disc;
-  margin-left: 20px;
-}
-
-.about-us li {
-  margin-bottom: 10px;
-  list-style: none;
-}
-
+/* Link styles */
 .about-us a {
   color: #bb893e;
   text-decoration: none;
 }
 
-.about-us a:hover {
-  text-decoration: underline;
+/* List item styles */
+.about-us li {
+  margin-bottom: 8px;
+}
+
+/* Media Queries */
+
+/* Media query for larger screens */
+@media only screen and (min-width: 768px) {
+  .about-us {
+    height: auto;
+  }
+
+  .about-us .Sub-cont {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .about-us img {
+    height: 90vh;
+    max-width: none; 
+  }
+
+  .about-us .content-text {
+    max-width: 50%; 
+    text-align: start;
+  }
+}
+
+/* Media query for smaller screens */
+@media only screen and (max-width: 576px) {
+  .about-us img {
+    height: 70vh;
+  }
 }

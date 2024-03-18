@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 import FullCalendar from "@fullcalendar/react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -100,13 +100,20 @@ const BookAppointment: React.FC<Props> = () => {
     });
     setSelectedDate("");
   };
+    const navigate = useNavigate(); 
 
+    const handleHomeButtonClick = (): void => {
+      // Navigate to the landing page
+      navigate("/");
+    };
   return (
     <div className="body">
-      <Link to="/" className="home-button">
-        Back to Home
-        <FontAwesomeIcon icon={faHome} />
-      </Link>
+      <div className="top-right-button">
+        <button className="home-button" onClick={handleHomeButtonClick}>
+          <span className="button-text">Back to Home</span>
+          <FontAwesomeIcon icon={faHome} />
+        </button>
+      </div>
       <div className="booking">
         <div className="book-appointment-container">
           <h2>Book Appointment</h2>

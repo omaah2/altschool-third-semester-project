@@ -20,6 +20,7 @@
   font-weight: 500;
   align-items: center;
   margin-right: 8vw;
+  margin-top: 5vh;
 }
 .servicetxt h1 {
   text-align: center;
@@ -123,6 +124,7 @@
   .servicetxt p {
     width: auto;
     margin: 2vh 0;
+    font-size: 14px;
   }
 
   .Motion {

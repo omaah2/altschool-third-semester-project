@@ -1,5 +1,3 @@
-
-
 /* Partners section */
 .partners-section {
   text-align: center;
@@ -181,11 +179,16 @@
 
 /* Media query for extra small screens */
 @media only screen and (max-width: 576px) {
-  .coop-section {
-    margin-top: 10px;
-    margin-bottom: 16px;
+  .partners-section {
+  margin-bottom: 16px;
   }
-
+  .coop-section {
+    width: 90%;
+    margin: auto;
+  }
+  .coop-paragraph{
+    margin-top: 30px;
+  }
   .coop-content {
     flex-direction: column;
     align-items: center;
