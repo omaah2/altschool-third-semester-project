@@ -29,7 +29,7 @@ const Navbar: React.FC = () => {
       setIsAuthenticated(false);
       navigate("/"); // Redirect to home page
     } catch (error) {
-      console.error("Error logging out:", error.message);
+      console.error("Error logging out:");
     }
   };
 

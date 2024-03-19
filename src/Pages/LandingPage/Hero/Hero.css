@@ -1,6 +1,6 @@
 .Banner {
   width: 100%;
-  height: 87vh;
+  height: 90vh auto;
   padding-top: 9vh;
   background-color: var(--background);
   position: relative; /* Add this */
@@ -62,11 +62,11 @@
   margin-bottom: 2vh;
   transition: 0.4s;
 }
-.Btn a{
-   color: #181111;
-   text-decoration: none;
-   font-size:1.2rem;
-   font-family:italics;
+.Btn a {
+  color: #181111;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-family: italics;
 }
 
 .Btn:hover {
@@ -109,22 +109,13 @@
   margin-bottom: 1.2vh;
 }
 
-.Find input {
-  height: 8vh;
-  width: 35vw;
-  border-radius: 25px;
-  border: none;
-  padding: 2vh 4vh;
-  color: black;
-  opacity: 0.7;
-}
-
 .Find input::placeholder {
   color: #999;
   font-style: italic;
 }
-.h-search{
+.h-search {
   margin-top: 5rem;
+  margin-bottom: 10rem;
 }
 
 @media screen and (max-width: 768px) {

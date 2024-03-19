@@ -1,10 +1,8 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 import React, { useState, useRef } from "react";
 import {
   getAuth,
   signInWithEmailAndPassword,
   createUserWithEmailAndPassword,
-  sendPasswordResetEmail,
 } from "firebase/auth";
 import { app } from "./../../firebase";
 import "./Auth.css";
@@ -21,8 +19,7 @@ const RegistrationForm: React.FC = () => {
   const [signUpName, setSignUpName] = useState<string>("");
   const [signUpEmail, setSignUpEmail] = useState<string>("");
   const [signUpPassword, setSignUpPassword] = useState<string>("");
-  const [forgotPasswordEmail, setForgotPasswordEmail] = useState<string>("");
-  const [error, setError] = useState<string>("");
+  const [, setError] = useState<string>("");
 
   const handleSignIn = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -50,18 +47,6 @@ const RegistrationForm: React.FC = () => {
     }
   };
 
-  const handleForgotPassword = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    try {
-      const auth = getAuth(app);
-      await sendPasswordResetEmail(auth, forgotPasswordEmail);
-      setError("Password reset instructions have been sent to your email.");
-      toast.success("Password reset instructions sent!");
-    } catch (error) {
-      setError((error as Error).toString());
-      toast.error("Password reset failed. Please try again.");
-    }
-  };
 
   const redirectToLandingPage = () => {
     navigate("/");

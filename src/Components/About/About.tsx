@@ -5,9 +5,8 @@ import "animate.css";
 
 interface AboutProps {
   className?: string;
-  name: string;
+  name: string; // Include the 'name' property in the interface
 }
-
 
 const About: React.FC<AboutProps> = ({ className }) => {
   return (

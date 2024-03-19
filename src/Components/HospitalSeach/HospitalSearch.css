@@ -10,12 +10,12 @@
 /* Styling for top right button */
 .top-right-button {
   display: flex;
-  justify-content: flex-end; 
+  justify-content: flex-end;
 }
 
 /* Styling for home button */
 .home-button {
-  padding: 8px 1%; 
+  padding: 8px 1%;
   border: 1px solid #9a6639;
   border-radius: 4px;
   color: var(--button);
@@ -89,7 +89,10 @@
   font-family: italics;
   margin-top: 20px;
   width: 25rem;
-  margin: 20px 20px 0 20px;
+  transform: scale(0.85);
+  position: relative;
+  z-index: 990;
+  margin: 20px 20px 55px 20px;
   max-height: 30rem;
   text-align: start;
   overflow-y: auto;
