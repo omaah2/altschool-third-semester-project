@@ -80,7 +80,7 @@ const Navbar: React.FC = () => {
             </div>
           </>
         ) : (
-          <button className="n-button" onClick={handleLogin}>
+          <button className="l-button" onClick={handleLogin}>
             Login
           </button>
         )}

@@ -29,7 +29,8 @@
   color: var(--text);
 }
 
-.n-button {
+.n-button,
+.l-button {
   padding: 8px 30px;
   border: 1px solid #9a6639;
   border-radius: 4px;
@@ -41,14 +42,7 @@
   box-shadow: var(--boxShadow);
 }
 
-.l-button {
-  list-style: none;
-  background-color: var(--button);
-  padding: 8px 30px;
-  border: none;
-  border-radius: 4px;
-  color: #211810;
-}
+
 
 .hamburger-menu {
   display: none; /* Initially hidden */
