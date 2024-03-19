@@ -20,6 +20,7 @@
 
 .n-middle ul li {
   margin-right: 20px;
+  cursor: pointer;
 }
 
 .n-middle ul li a {

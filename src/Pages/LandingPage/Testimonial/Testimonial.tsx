@@ -1,5 +1,7 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import React from "react";
 import "./Testimonial.css";
+
 
 interface Testimonial {
   id: number;
@@ -7,6 +9,7 @@ interface Testimonial {
   rating: number;
   comment: string;
 }
+
 
 // Testimonial data array
 const testimonials: Testimonial[] = [

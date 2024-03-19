@@ -15,7 +15,9 @@ const LandingPage: React.FC = () => {
       <Hero />
       <Service />
       <Doctor />
-      <About />
+      <div id="about">
+        <About name="about" />
+      </div>
       <How />
       <Testimonial />
       <Footer />
