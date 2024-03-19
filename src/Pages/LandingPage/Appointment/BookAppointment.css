@@ -4,6 +4,8 @@
   justify-content: space-between;
   align-items: center;
   flex-direction: column;
+  background-color: var(--background);
+  height: 130vh;
 }
 
 /* Adjusted button text styles */
@@ -27,7 +29,7 @@
   padding: 20px;
   background-color: var(--background);
   border-radius: 10px;
-  box-shadow: var(--boxShadow); 
+  box-shadow: var(--boxShadow);
   margin-bottom: 25px;
   margin-left: 10px;
 }
@@ -36,7 +38,7 @@
 h2 {
   text-align: center;
   margin-bottom: 20px;
-  color: #c66d2e; 
+  color: #c66d2e;
 }
 
 /* Selected date styles */
@@ -98,6 +100,7 @@ textarea {
   width: 25rem;
   padding: 20px;
   background-color: #f5dabb;
+  box-shadow: var(--boxShadow);
   border-radius: 10px;
   margin-bottom: 20px;
 }
@@ -169,7 +172,7 @@ textarea {
 
 /* Doctor field styles */
 .doctor p {
-  color: #666
+  color: #666;
 }
 
 /* Media query for tablet screens */
