@@ -8,7 +8,7 @@ import BookAppointment from "./Pages/LandingPage/Appointment/BookAppointment";
 import Service from "./Pages/LandingPage/Service/service";
 import How from "./Pages/LandingPage/How/How";
 import About from "./Components/About/About";
-import HospitalSearch from "./Components/HospitalSearch";
+import HospitalSearch from "./Components/HospitalSeach/HospitalSearch";
 import PageNotFound from "./Pages/PageNotFound/PageNotFound";
 
 import "./App.css";

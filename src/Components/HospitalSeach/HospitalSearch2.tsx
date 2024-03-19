@@ -1,11 +1,7 @@
 // Importing necessary modules and hooks
 import React, { useState } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHome } from "@fortawesome/free-solid-svg-icons";
-import { useNavigate } from "react-router-dom"; // Import useNavigate hook
-import HospitalForm from "./HospitalForm/HospitalForm";
-import data from "../utils/data.json";
-import Footer from "../Components/Footer/Footer";
+import data from "../../utils/data.json";
+
 import "./HospitalSearch.css";
 
 // Interface defining the structure of Hospital object
@@ -33,7 +29,7 @@ function HospitalSearch(): JSX.Element {
   const [searchTerm, setSearchTerm] = useState<string>("");
   const [searchResults, setSearchResults] = useState<Hospital[]>([]);
   const [selectedHospitals, setSelectedHospitals] = useState<Hospital[]>([]);
-  const navigate = useNavigate(); // Initialize useNavigate hook
+
 
   // Function to handle search input change
   const handleSearch = (event: React.ChangeEvent<HTMLInputElement>): void => {
@@ -65,22 +61,10 @@ function HospitalSearch(): JSX.Element {
     }
   };
 
-  // Function to handle click on "Back to Home" button
-  const handleHomeButtonClick = (): void => {
-    // Navigate to the landing page
-    navigate("/");
-  };
 
   // Rendering the JSX elements
   return (
     <div className="Ctn">
-      <div className="top-right-button">
-        {/* "Back to Home" button */}
-        <button className="home-button" onClick={handleHomeButtonClick}>
-          <span className="button-text">Back to Home</span>
-          <FontAwesomeIcon icon={faHome} />
-        </button>
-      </div>
       <div className="search">
         {/* Hospital search input */}
         <input
@@ -142,10 +126,6 @@ function HospitalSearch(): JSX.Element {
           </div>
         ))}
       </div>
-      {/* Hospital Form component */}
-      <HospitalForm />
-      {/* Footer component */}
-      <Footer />
     </div>
   );
 }

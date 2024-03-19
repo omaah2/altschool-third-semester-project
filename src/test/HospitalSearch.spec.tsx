@@ -2,7 +2,7 @@ import { expect, test } from "vitest";
 import { render, screen, fireEvent } from "@testing-library/react";
 import "@testing-library/jest-dom"; // Import testing-library's Jest DOM extensions
 import { BrowserRouter as Router } from "react-router-dom"; // Import BrowserRouter
-import HospitalSearch from "../Components/HospitalSearch";
+import HospitalSearch from "../Components/HospitalSeach/HospitalSearch";
 
 test("renders HospitalSearch component", () => {
   render(
@@ -15,7 +15,6 @@ test("renders HospitalSearch component", () => {
   );
   expect(searchInput).toBeInTheDocument();
 });
-
 
 test("navigates to landing page on home button click", () => {
   render(
@@ -47,5 +46,3 @@ test("automatically selects first search result on enter button click", () => {
   const hospitalDetails = screen.getByText("Hospital Details");
   expect(hospitalDetails).toBeInTheDocument();
 });
-
-

@@ -123,6 +123,9 @@
   color: #999;
   font-style: italic;
 }
+.h-search{
+  margin-top: 5rem;
+}
 
 @media screen and (max-width: 768px) {
   .Banner {
@@ -167,9 +170,7 @@
     transform: scale(1.9);
   }
 
-  .Find input {
-    width: 70vw;
-    transform: scale(0.9);
+  .h-search {
     margin-top: 10px;
     margin-bottom: 35px;
   }
