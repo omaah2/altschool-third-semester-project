@@ -20,28 +20,28 @@ interface Doctor {
 const initialDoctors: Doctor[] = [
   {
     id: 1,
-    name: "Dr. John Doe",
+    name: "Dr. Jane Smith",
     field: "Cardiologist",
     specialization: "Cardiology",
     experience: 10,
   },
   {
     id: 2,
-    name: "Dr. Jane Smith",
+    name: "Dr. John Doe",
     field: "Neurologist",
     specialization: "Neurology",
     experience: 8,
   },
   {
     id: 3,
-    name: "Dr. Michael Johnson",
+    name: "Dr. Emily Brown",
     field: "Orthopedic Surgeon",
     specialization: "Orthopedics",
     experience: 12,
   },
   {
     id: 4,
-    name: "Dr. Emily Brown",
+    name: "Dr. Michael Johnson",
     field: "Pediatrician",
     specialization: "Pediatrics",
     experience: 7,

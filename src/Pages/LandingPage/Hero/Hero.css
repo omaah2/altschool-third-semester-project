@@ -3,7 +3,7 @@
   height: 90vh auto;
   padding-top: 9vh;
   background-color: var(--background);
-  position: relative; /* Add this */
+  position: relative;
   overflow: hidden;
 }
 
@@ -73,20 +73,22 @@
   opacity: 0.9;
 }
 
-.Link {
+.learn-more {
   display: flex;
   align-items: center;
   gap: 1rem;
   text-decoration: none;
   font-weight: 400;
-  font-size: calc(6px + 1vw);
+  font-size: calc(10px + 1vw);
   font-style: italic;
   color: black;
+  margin: 12px;
 }
 
 .ArrowRight {
   height: 2.3vh;
   width: 1.5vw;
+  margin-left: 5px;
 }
 
 .HeroImage {
@@ -163,6 +165,6 @@
 
   .h-search {
     margin-top: 10px;
-    margin-bottom: 35px;
+    margin-bottom: 45px;
   }
 }

@@ -1,12 +1,12 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
+import { Link as ScrollLink } from "react-scroll";
+import { Link } from "react-router-dom"; 
 import hero from "../../../assests/images/hero-card.jpg";
 import right from "../../../assests/images/arrow-right.png";
 import "animate.css";
 import "./Hero.css";
 import HospitalSearch from "../../../Components/HospitalSeach/HospitalSearch2";
-
 
 const Hero: React.FC = () => {
   const textVariants = {
@@ -47,11 +47,13 @@ const Hero: React.FC = () => {
             Find the best care tailored to your needs.
           </p>
           <button className="Btn">
-            <a href="/auth">Get Started</a>
+            <Link to="/auth">Get Started</Link> 
           </button>
-          <Link to="/about" className="Link">
-            Learn more <img src={right} alt="" className="ArrowRight" />
-          </Link>
+          <div className="learn-more">
+            <ScrollLink to="about" smooth={true} duration={500}>
+              Learn more <img src={right} alt="" className="ArrowRight" />
+            </ScrollLink>
+          </div>
         </div>
         <div className="animate__animated  animate__backInRight">
           <img src={hero} alt="" className="HeroImage" />

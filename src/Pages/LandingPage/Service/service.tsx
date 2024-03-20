@@ -53,7 +53,7 @@ function Service() {
             alt=""
             style={{
               objectFit: "cover",
-              width: "20vw",
+              width: "30vw",
               height: "65vh",
               borderRadius: "20px",
             }}
@@ -66,7 +66,7 @@ function Service() {
             alt=""
             style={{
               objectFit: "cover",
-              width: "20vw",
+              width: "30vw",
               height: "65vh",
               borderRadius: "20px",
               alignSelf: "flex-end",

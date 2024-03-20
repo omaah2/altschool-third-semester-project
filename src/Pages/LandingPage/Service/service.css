@@ -111,14 +111,13 @@
 
   .serviceWrap {
     flex-direction: column;
-    height: 50vh;
+    height:  auto;
     width: 20vh;
     margin-left: 0;
   }
 
   .servicetxt {
     margin-right: 0;
-    margin-bottom: 1vh;
     font-size: 10px;
     padding: 5px;
   }
