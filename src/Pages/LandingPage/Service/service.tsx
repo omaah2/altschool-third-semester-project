@@ -89,7 +89,6 @@ function Service() {
             your healthcare experience by connecting with others and sharing
             valuable resources.
           </p>
-          <button>Our Services</button>
         </div>
       </div>
       <div className="Motion">
