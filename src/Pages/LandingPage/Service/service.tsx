@@ -51,6 +51,7 @@ function Service() {
           <motion.img
             src={One}
             alt=""
+            className="motion-img"
             style={{
               objectFit: "cover",
               width: "30vw",
@@ -64,6 +65,7 @@ function Service() {
           <motion.img
             src={Two}
             alt=""
+            className="motion-img"
             style={{
               objectFit: "cover",
               width: "30vw",

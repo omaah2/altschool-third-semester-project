@@ -5,14 +5,18 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 20vh;
+  margin-bottom: 15vh;
 }
 .serviceWrap {
   display: flex;
   gap: 1.2vw;
   width: 30vh;
-  height: 70vh;
+  height: 80vh;
   margin-left: 4vh;
+}
+.motion-img {
+  object-fit: cover;
+  border-radius: 20px;
 }
 .servicetxt {
   display: flex;
@@ -111,15 +115,15 @@
 
   .serviceWrap {
     flex-direction: column;
-    height:  auto;
+    height: 50 auto;
     width: 20vh;
     margin-left: 0;
   }
-
   .servicetxt {
+   top: 30;
     margin-right: 0;
     font-size: 10px;
-    padding: 5px;
+    padding: 10px;
   }
 
   .servicetxt p {
