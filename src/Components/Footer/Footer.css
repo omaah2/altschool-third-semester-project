@@ -35,25 +35,28 @@
 .footer-top {
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap; 
+  flex-wrap: wrap;
 }
 
 .footer ul {
   list-style-type: none;
-  padding: 0;
+  padding: 5px;
   display: flex;
-  flex-wrap: wrap; 
-  justify-content: center; 
-  margin: 10px 0; 
+  /* flex-wrap: wrap;  */
+  justify-content: center;
+  margin: 10px 0;
 }
 
 .footer ul li {
-  margin: 0 10px; 
+  margin: 0 10px;
 }
 
 .footer ul li a {
   color: var(--text);
   text-decoration: none;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
 }
 
 .footer ul li a:hover {
@@ -69,15 +72,15 @@
 @media (max-width: 768px) {
   .footer {
     padding: 10px;
-    width: 95%;
+    width: 100%;
   }
 
   .footer::before,
   .footer::after {
-    top: -5px; 
+    top: -5px;
   }
 
   .footer ul {
-    margin: 10px 0; 
+    margin: 20px 0;
   }
 }
