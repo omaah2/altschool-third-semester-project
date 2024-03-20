@@ -5,7 +5,7 @@
   align-items: center;
   flex-direction: column;
   background-color: var(--background);
-  height: 130vh;
+  height: 130vh auto;
 }
 
 /* Adjusted button text styles */

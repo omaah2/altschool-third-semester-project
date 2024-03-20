@@ -144,15 +144,15 @@
 
   .hospital-table {
     transform: scale(0.89);
-    width: 10%;
-    margin: 30px auto;
+    width: 100%;
+    margin: 20px auto;
     font-size: 10px;
     justify-content: center;
   }
 
   .hospital-table th,
   .hospital-table td {
-    padding: 0px;
+    padding: 12px;
   }
 
   .d-btn {
