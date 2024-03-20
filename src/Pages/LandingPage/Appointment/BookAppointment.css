@@ -1,11 +1,8 @@
-/* Adjustments for responsive design */
-
 .body {
   justify-content: space-between;
   align-items: center;
-  flex-direction: column;
   background-color: var(--background);
-  height: 130vh auto;
+  height: 130vh;
 }
 
 /* Adjusted button text styles */

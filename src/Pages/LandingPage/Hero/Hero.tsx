@@ -14,18 +14,19 @@ const Hero: React.FC = () => {
     <div className="Banner">
       <div className="Cont">
         <div className="Bannertxt">
-          <h1 className="txt">
+          <h1 className="txt animate__animated animate__heartBeat animate__repeat-2	2">
             Discover Your Perfect Care <br />
-            <span className="span">Find the nearest</span>
+            <span className="span ">Find the nearest</span>
             Hospital <br />
             24/7, Everywhere!
           </h1>
           <p>
-            Your health is precious.<br />
+            Your health is precious.
+            <br />
             Find the best care tailored to your needs.
           </p>
           <button className="Btn">
-            <Link to="/auth">Get Started</Link> 
+            <Link to="/auth">Get Started</Link>
           </button>
           <div className="learn-more">
             <ScrollLink to="about" smooth={true} duration={500}>

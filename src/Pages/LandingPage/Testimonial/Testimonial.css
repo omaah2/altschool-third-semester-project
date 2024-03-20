@@ -9,6 +9,7 @@
   display: flex;
   overflow: hidden;
   margin-bottom: 20px;
+   padding: 10px 5vw;
 }
 
 /* Styles for Testimonial Cards */
