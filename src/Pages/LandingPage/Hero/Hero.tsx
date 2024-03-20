@@ -1,5 +1,4 @@
 import React from "react";
-import { motion } from "framer-motion";
 import { Link as ScrollLink } from "react-scroll";
 import { Link } from "react-router-dom"; 
 import hero from "../../../assests/images/hero-card.jpg";
@@ -9,12 +8,7 @@ import "./Hero.css";
 import HospitalSearch from "../../../Components/HospitalSeach/HospitalSearch2";
 
 const Hero: React.FC = () => {
-  const textVariants = {
-    animate: {
-      scale: [0.9, 1.1, 0.9],
-      transition: { duration: 2, repeat: Infinity },
-    },
-  };
+ 
 
   return (
     <div className="Banner">
@@ -22,28 +16,12 @@ const Hero: React.FC = () => {
         <div className="Bannertxt">
           <h1 className="txt">
             Discover Your Perfect Care <br />
-            <motion.span
-              initial={{ scale: 0 }}
-              variants={textVariants}
-              animate="animate"
-            >
-              {Array.from("Find the Nearest").map((letter, index) => (
-                <motion.span
-                  key={index}
-                  style={{ display: "inline-block" }}
-                  initial={{ opacity: 0, y: -20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: index * 0.1 }}
-                >
-                  {letter}
-                </motion.span>
-              ))}
-            </motion.span>{" "}
+            <span className="span">Find the nearest</span>
             Hospital <br />
             24/7, Everywhere!
           </h1>
           <p>
-            Your health is precious. <br />
+            Your health is precious.<br />
             Find the best care tailored to your needs.
           </p>
           <button className="Btn">

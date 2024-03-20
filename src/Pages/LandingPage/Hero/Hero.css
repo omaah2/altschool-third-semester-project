@@ -24,32 +24,34 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin: 0 5vw  ;
 }
 
 .Bannertxt {
-  display: flex;
-  flex-direction: column;
   align-items: center;
-  text-align: center;
+  text-align: left;
   font-size: calc(6px + 1vw);
   line-height: 1.1;
-  margin-left: 2vw;
 }
 
 .Txt {
   color: var(--text);
   font-weight: 600;
   margin-bottom: 2vh;
+  
 }
-.txt span {
+.txt .span {
   color: var(--text);
-  font-weight: 600;
-  font-size: 2.3rem;
+  font-weight: 700;
+  margin-left: 2px ;
+  padding-right: 10px;
+  font-size: 3.8rem;
 }
 
+
 .Bannertxt p {
-  font-weight: 500;
-  margin-bottom: 4vh;
+  font-weight: 400;
+  margin: 2rem 0;
 }
 
 .Btn {
@@ -60,7 +62,6 @@
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  margin-bottom: 2vh;
   transition: 0.4s;
 }
 .Btn a {
@@ -80,7 +81,7 @@
   gap: 1rem;
   text-decoration: none;
   font-weight: 400;
-  font-size: calc(10px + 1vw);
+  font-size: calc(8px + 1vw);
   font-style: italic;
   color: black;
   margin: 12px;
@@ -96,7 +97,7 @@
   height: 50vh;
   width: 43vw;
   object-fit: cover;
-  border-radius: 25px 0 0 25px;
+  border-radius: 25px;
 }
 
 .Find {
@@ -140,8 +141,8 @@
     flex-direction: column;
     text-align: center;
   }
-  .txt span {
-    font-size: 1.2rem;
+  .txt .span {
+    font-size: 1.5rem;
   }
 
   .Bannertxt {

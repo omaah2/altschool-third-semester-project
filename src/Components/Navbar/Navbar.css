@@ -1,25 +1,27 @@
-/* Navbar Wrapper */
 .n-wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
   border: none;
   background: var(--background);
-  padding: 10px 20px;
+  padding: 10px 5vw;
 }
 
 /* Logo */
 .n-left img {
   width: 100%;
-  max-width: 150px;
+  max-width: 250px;
 }
 
 /* Navigation Links */
+.n-middle{
+   margin-left: auto;
+}
 .n-middle ul {
   list-style: none;
   display: flex;
   align-items: center;
-  margin: 0;
+ 
 }
 
 .n-middle ul li {
@@ -30,7 +32,9 @@
 .n-middle ul li a {
   padding: 10px 20px;
   text-decoration: none;
+  font-size: 18px;
   color: var(--text);
+
 }
 .n-middle ul li a:hover {
    text-decoration: underline;
@@ -51,6 +55,7 @@
 .n-right {
   display: flex;
   align-items: center;
+  margin-bottom: 10px;
 }
 
 .n-right .n-button {
