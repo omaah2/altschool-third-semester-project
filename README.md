@@ -25,9 +25,11 @@ CareFinder utilizes Firebase for authentication and data storage, ensuring secur
 
 The frontend of CareFinder is built using React, a popular JavaScript library for building user interfaces. React allows us to create dynamic and interactive components, providing users with a smooth and responsive browsing experience.
 
-For styling, i use CSS along with the Chakra UI library, which provides a set of accessible and customizable components to enhance the visual appeal and usability of the CareFinder platform.
+For styling, i used CSS along with the Chakra UI library, which provides a set of accessible and customizable components to enhance the visual appeal and usability of the CareFinder platform.
 
-For animations, i use css animation and framer motion
+For animations, i used react-scroll, animate css and framer motion.
+
+For the testing i used vitest,react-testing-library and jest
 
 Overall, CareFinder aims to provide a user-friendly, reliable, and secure platform for accessing healthcare information and services, leveraging modern technologies and best practices to meet the needs of our users.
 
@@ -37,6 +39,7 @@ Overall, CareFinder aims to provide a user-friendly, reliable, and secure platfo
 - **Share Information**: Share detailed hospital profiles with your friends, family, or healthcare professionals to facilitate informed discussions and decisions.
 - **Book Appointments**: Seamlessly schedule appointments with healthcare providers directly through our platform, saving you time and effort.
 - **Export Information**: Download hospital information for offline access or to keep a record of your healthcare preferences.
+
 
 ## Installation 🛠️
 
