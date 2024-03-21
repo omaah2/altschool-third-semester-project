@@ -132,12 +132,15 @@ textarea {
 .doctors-section {
   width: 90%;
   margin: 20px auto;
-  padding: 20px;
+  padding: 20vh 20px 0 20px;
   background-color: #f5dabb;
   border-radius: 10px;
   box-shadow: var(--boxShadow);
 }
-
+.doctors-section h2{
+  font-size: 30px;
+  margin-bottom: 15px;
+}
 /* Doctors list styles */
 .doctors-list {
   display: flex;
@@ -153,10 +156,10 @@ textarea {
 
 /* Doctor image styles */
 .doctor img {
-  width: 80%;
-  height: auto;
-  border-radius: 50%;
-  object-fit: cover;
+  height: 50%;
+  width: 100%;
+  border-radius: 100%;
+ object-fit: scale-down;
   margin-right: 5px;
   margin-bottom: 10px;
 }

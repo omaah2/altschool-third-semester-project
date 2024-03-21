@@ -81,7 +81,7 @@ function Service() {
         <div className="servicetxt">
           <h1>
             Welcome to <br />{" "}
-            <span>
+            <span className="service-img">
               <img src={logo} alt="" />
             </span>
           </h1>

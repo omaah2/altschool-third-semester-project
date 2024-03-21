@@ -23,20 +23,21 @@
   display: flex;
   flex-direction: column;
   font-weight: 500;
-  align-items: center;
+  align-items: left;
   padding: 10px;
   margin-top: 5vh;
 }
-.servicetxt h1 {
-  text-align: center;
+.service-img{
+  margin-left: -10px;
 }
 .servicetxt span {
   color: var(--text);
 }
 .servicetxt p {
-  width: 36vw;
-  text-align: center;
-  margin-top: 6vh;
+  width: 30vw;
+  text-align: left;
+  margin-top: 2vh;
+  font-size: 18px;
   margin-bottom: 6vh;
 }
 .servicetxt button {
@@ -57,18 +58,15 @@
   margin-bottom: 22vh;
   margin-left: auto;
   margin-right: auto;
-  width: 90%;
 }
 .Content {
   background-color: var(--background);
   border-radius: 0.75rem;
   width: 20vw;
   height: 30vh;
-  padding-top: 1.8vh;
+  padding: 25px;
   text-align: center;
   font-weight: 500;
-  padding-left: 7px;
-  padding-right: 7px;
 }
 .Content2 {
   width: 4vw;
