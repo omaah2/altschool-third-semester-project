@@ -141,13 +141,13 @@ textarea {
   font-size: 30px;
   margin-bottom: 15px;
 }
-/* Doctors list styles */
+
 .doctors-list {
   display: flex;
   justify-content: space-between;
 }
 
-/* Doctor item styles */
+
 .doctor {
   text-align: center;
   width: 30%;
