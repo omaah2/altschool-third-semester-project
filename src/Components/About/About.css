@@ -9,13 +9,13 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-padding: 20px;
+   padding: 20px;
 }
 
 .about-us img {
   max-width: 100%;
   height: auto;
-  padding: 20px;
+
   border-radius: 35px;
   object-fit: cover;
 }
@@ -54,12 +54,15 @@ padding: 20px;
   margin-bottom: 8px;
 }
 
-/* Media Queries */
-
-/* Media query for larger screens */
-@media only screen and (min-width: 768px) {
+@media  screen and (min-width: 768px) {
   .about-us {
     height: auto;
+  }
+
+  
+  .about-us img {
+    height: 90vh;
+    max-width: none;
   }
 
   .about-us .Sub-cont {
@@ -68,21 +71,15 @@ padding: 20px;
     align-items: center;
   }
 
-  .about-us img {
-    height: 90vh;
-    max-width: none;
-  }
-
   .about-us .content-text {
     max-width: 50%;
-    text-align: center;
-    padding: 6px 10px;
-
+    text-align: start;
+    
   }
 }
 
 /* Media query for smaller screens */
-@media only screen and (max-width: 576px) {
+@media screen and (max-width: 576px) {
   .about-us img {
     height: 70vh;
   }
