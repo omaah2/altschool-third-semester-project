@@ -6,25 +6,25 @@
 }
 
 .about-us .Sub-cont {
-  width: 80%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 20px;
+padding: 20px;
 }
 
 .about-us img {
-  max-width: 100%; 
-  height: auto; 
-  margin-top: 35px;
+  max-width: 100%;
+  height: auto;
+  padding: 20px;
   border-radius: 35px;
   object-fit: cover;
 }
 
 .about-us .content-text {
-  max-width: 100%; 
-  text-align: center; 
+  max-width: 100%;
+  text-align: left;
   padding: 20px;
+  margin-left: 20px;
 }
 
 /* Header styles */
@@ -40,6 +40,7 @@
 /* Paragraph styles */
 .about-us p {
   font-size: 14px;
+  margin: 15px 0;
 }
 
 /* Link styles */
@@ -69,12 +70,14 @@
 
   .about-us img {
     height: 90vh;
-    max-width: none; 
+    max-width: none;
   }
 
   .about-us .content-text {
-    max-width: 50%; 
-    text-align: start;
+    max-width: 50%;
+    text-align: center;
+    padding: 6px 10px;
+
   }
 }
 
